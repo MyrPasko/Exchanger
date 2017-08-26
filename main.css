@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid black;*/
+}
+
+body {
+    background: url(img/green_dust_scratch.png);
+    font: 1em 'PT Sans', Arial, sans-serif;
+}
+
+#head {
+    width: 309px;
+    margin: auto;
+}
+
+#picture {
+    width: 309px;
+    height: 313px;
+    margin: auto;
+}
+
+div {
+
+}
+
+#wrapper {
+    margin: auto;
+    width: 900px;
+    overflow: auto;          /*подгоняет родительский див под размер содержимого*/
+    background-color: #fdfdfd;
+}
+
+#left, #right {
+    float: left;
+    width: 446px;
+}
+
+h2 {
+    display: block;
+    width: 350px;
+    margin: 5px 0 5px 10px;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.pairs {
+    position: relative;
+    height: 80px;
+    margin: 3px 0;
+
+    border-top: 3px solid #999999;
+    border-bottom: 3px solid #999999;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 10px;
+}

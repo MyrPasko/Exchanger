@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchanger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="head">
+        <div id="picture">
+            <img src="img/converter21.png"
+                 alt="logo">
+        </div>
+        <h1>Online Exchange Rate</h1>
+    </div>
+    <div id="main">
+        <div id="left">
+            <div id="time">
+                <h2>Settings</h2>
+                <div class="timer pairs">
+                    <p>Refresh time</p>
+                    <input type="text" value="#">
+                </div>
+            </div>
+            <div id="rates">
+                <h2>Symbols</h2>
+                <div class="pairs">
+                    <p>EUR / USD</p>
+                    <input class="btn" type="button" value="#">
+                </div>
+                <div class="pairs">
+                    <p>EUR / GBP</p>
+                    <input class="btn" type="button" value="#">
+                </div>
+                <div class="pairs">
+                    <p>EUR / UAH</p>
+                    <input class="btn" type="button" value="#">
+                </div>
+                <div class="pairs">
+                    <p></p>
+                    <input class="btn" type="button" value="#">
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <h2>Rates</h2>
+            <div id="results"></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script type="application/javascript" src="action.js"></script>
+</html>
