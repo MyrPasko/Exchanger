@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,37 +24,71 @@
                 <h2>Settings</h2>
                 <div class="timer pairs">
                     <p>Refresh time</p>
-                    <input type="text" value="#">
+                        <select name="period" class="select time" id="period" size="1">
+                            <!--<option disabled>Choose the period</option>-->
+                            <option value="1000">1 second</option>
+                            <option value="60000">1 minute</option>
+                            <option value="3600000">1 hour</option>
+                        </select>
                 </div>
             </div>
             <div id="rates">
                 <h2>Symbols</h2>
-                <div class="pairs">
-                    <p>EUR / USD</p>
-                    <input class="btn" type="button" value="#">
+                <div class="pairs"><p>EUR / USD</p>
+                    <input class="btn add" type="button" value="Add">
                 </div>
-                <div class="pairs">
-                    <p>EUR / GBP</p>
-                    <input class="btn" type="button" value="#">
+                <div class="pairs"><p>EUR / GBP</p>
+                    <input class="btn add" type="button" value="Add">
                 </div>
-                <div class="pairs">
-                    <p>EUR / UAH</p>
-                    <input class="btn" type="button" value="#">
+                <div class="pairs"><p>EUR / UAH</p>
+                    <input class="btn add" type="button" value="Add">
                 </div>
-                <div class="pairs">
-                    <p></p>
-                    <input class="btn" type="button" value="#">
+                <div class="pairs"><select name="numerator" class="select numerator" size="1">
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="gbp">GBP</option>
+                            <option value="uah">UAH</option>
+                        </select>
+                    <span>/</span><select name="denominator" class="select denominator" size="1">
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="gbp">GBP</option>
+                            <option value="uah">UAH</option>
+                        </select>
+                    <input class="btn add" type="button" value="Add">
                 </div>
             </div>
         </div>
         <div id="right">
             <h2>Rates</h2>
-            <div id="results"></div>
+            <div class="pairs">
+                <table>
+                    <tr>
+                        <th>Pair</th>
+                        <th>Bid</th>
+                        <th>Ask</th>
+                    </tr>
+                </table>
+            </div>
+            <h2>Results</h2>
+            <div id="results">
+                <div class="pairs" id="prototype">
+                    <table>
+                        <tr>
+                            <td>EUR / UAH</td>
+                            <td>30.15</td>
+                            <td>29.61</td>
+                        </tr>
+                    </table>
+                    <input class="btn res remove" type="button" value="Remove">
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 
 </body>
+
 <script type="application/javascript" src="action.js"></script>
 </html>

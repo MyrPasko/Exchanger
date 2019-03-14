@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     /*border: 1px solid black;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    outline: none;      /*  убирает браузерную обводку с элементов (синюю или черную рамку при клике)*/
 }
 
 body {
@@ -15,25 +20,31 @@ body {
 }
 
 #picture {
-    width: 309px;
-    height: 313px;
+    width: 103px;
+    height: 105px;
     margin: auto;
 }
 
-div {
-
+img {
+    width: inherit;
+    height: inherit;
 }
 
 #wrapper {
     margin: auto;
     width: 900px;
-    overflow: auto;          /*подгоняет родительский див под размер содержимого*/
-    background-color: #fdfdfd;
+    overflow: auto; /*подгоняет родительский див под размер содержимого*/
+    background-color: #ffffff;
 }
 
 #left, #right {
     float: left;
     width: 446px;
+}
+
+h1 {
+    text-align: center;
+    margin: 5px 0;
 }
 
 h2 {
@@ -42,20 +53,91 @@ h2 {
     margin: 5px 0 5px 10px;
 }
 
-
-h1 {
-    text-align: center;
-    margin: 5px 0;
-}
-
 .pairs {
     position: relative;
-    height: 80px;
-    margin: 3px 0;
+    height: 70px;
+    /*margin: 3px 0;*/
+    margin: 0;
 
-    border-top: 3px solid #999999;
-    border-bottom: 3px solid #999999;
+}
+
+.pairs:nth-of-type(odd) {
+    background-color: #cccccc;
+}
+
+.pairs:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+.pairs p, select, span, table{
+    position: absolute;
+    top: 18px;
+    height: 28px;
+
+    font-size: 1.3em;
+    font-stretch: condensed;         /*  ширина шрифта */
+
+    text-shadow: 0 1px 0 #eee;
+}
+
+.pairs p {
+    display: block;
+    left: 10px;
+}
+
+.time {
+    right: 10px;
+}
+
+table {
+    left: 10px;
+    top: 16px;
+}
+
+th, td, tr {
+    width: 110px;
+    /*border: 1px solid #000000;*/
+    text-align: left;
+    font-stretch: extra-condensed;
+}
+
+.numerator {
+    left: 10px;
+}
+
+.denominator {
+    left: 90px;
+}
+
+span {
+    left: 76px;
+    top: 16px;
+}
+
+
+.btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
+
+    width: 70px;
+    height: 45px;
+
+    background-color: rgba(0, 200, 0, 0.8);
+    border: 2px solid rgba(0, 200, 0, 0.6);
+    color: #ffffff
+
 }
+
+.btn:active {
+    background-color: rgba(0, 255, 0, 0.5);
+    border: 2px solid rgba(0, 255, 0, 0.3);
+}
+
+#prototype {
+    display: none;
+}
+
